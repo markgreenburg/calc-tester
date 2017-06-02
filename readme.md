@@ -1,7 +1,6 @@
 #TO-DO#
-* define proptypes
+* ~~define proptypes~~
 * swap out local state for redux implementation
-* define proptypes
 * lint, config linter
 
 

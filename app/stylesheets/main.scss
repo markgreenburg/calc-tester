@@ -27,6 +27,9 @@ button {
     &:active {
       opacity: 1;
     }
+    &.active {
+      border: 1px solid #000;
+    }
   }
 
 .calculator__results {

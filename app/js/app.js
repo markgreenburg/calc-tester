@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import Results from './results';
 import Keypad from './keypad';
 
@@ -78,6 +79,7 @@ export class App extends Component {
 
   inputOperator(operator) {
     if (this.state.currentOperator) this.inputEqual();
+    // Refactor: possible race condition - switch to redux should eliminate
     this.setState({
       currentOperator: operator,
       operatorActivated: true,
@@ -110,6 +112,7 @@ export class App extends Component {
       total,
       displayValue: String(total),
       holdValue: '0',
+      currentOperator: null,
     }, () => console.log(this.state));
   }
 
@@ -120,6 +123,7 @@ export class App extends Component {
           displayValue={this.state.displayValue}
         />
         <Keypad
+          currentOperator={this.state.currentOperator}
           inputNumber={this.inputNumber}
           inputClear={this.inputClear}
           inputReverse={this.inputReverse}
@@ -132,4 +136,12 @@ export class App extends Component {
   }
 }
 
-export default connect()(App)
+const mapStateToProps = (state) => {
+  return {};
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

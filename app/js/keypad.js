@@ -3,6 +3,17 @@ import Key from './key.js';
 import PropTypes from 'prop-types';
 
 const Keypad = (props) => {
+  const operators = ["/", "x", "-", "+", "="].map((operator) => {
+    return (
+      <Key
+        displayValue={operator}
+        inputType="operation"
+        handleClick={props.inputOperator}
+        className={(props.currentOperator === operator ? "active" : "")}
+      />
+    );
+  });
+
   return (
     <div className="calculator__keypad">
       <div className="keypad__left">
@@ -86,37 +97,14 @@ const Keypad = (props) => {
         </div>
       </div>
       <div className="keypad__right">
-        <Key
-          displayValue="/"
-          inputType="operation"
-          handleClick={props.inputOperator}
-        />
-        <Key
-          displayValue="x"
-          inputType="operation"
-          handleClick={props.inputOperator}
-        />
-        <Key
-          displayValue="-"
-          inputType="operation"
-          handleClick={props.inputOperator}
-        />
-        <Key
-          displayValue="+"
-          inputType="operation"
-          handleClick={props.inputOperator}
-        />
-        <Key
-          displayValue="="
-          inputType="operation"
-          handleClick={props.inputEqual}
-        />
+        {operators}
       </div>
     </div>
   );
 };
 
 Keypad.propTypes = {
+  currentOperator: PropTypes.string.isRequired,
   inputNumber: PropTypes.func.isRequired,
   inputClear: PropTypes.func.isRequired,
   inputReverse: PropTypes.func.isRequired,
