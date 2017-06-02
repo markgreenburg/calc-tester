@@ -1,3 +1,10 @@
+#TO-DO#
+* define proptypes
+* swap out local state for redux implementation
+* define proptypes
+* lint, config linter
+
+
 #GoCo Calculator Coding Challenge
 
 You'll be building a simple react component: a calculator. It will look like the native calculator on an iOS or OSX.

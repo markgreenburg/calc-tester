@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const Results = (props) => {
     return (
@@ -6,6 +7,10 @@ const Results = (props) => {
         {props.displayValue || '0'}
       </div>
     );
+};
+
+Results.propTypes = {
+  displayValue: PropTypes.string.isRequired,
 };
 
 export default Results;
