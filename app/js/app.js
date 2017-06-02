@@ -47,7 +47,10 @@ export class App extends Component {
   }
 
   inputClear() {
-    this.setState({ displayValue: '' }, () => {
+    this.setState({
+      displayValue: '',
+      currentOperator: null,
+    }, () => {
       console.log(this.state.displayValue);
     });
   }
