@@ -108,7 +108,7 @@ export class App extends Component {
     }
     this.setState({
       total,
-      displayValue: total,
+      displayValue: String(total),
       holdValue: '0',
     }, () => console.log(this.state));
   }

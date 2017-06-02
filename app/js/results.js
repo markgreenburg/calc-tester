@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Results = (props) => {
     let actualDisplay;
-    if (props.displayValue[0] !== "0"
+    if (props.displayValue[0] === "0"
         && props.displayValue.length > 1
         && props.displayValue[1] !== ".") {
       actualDisplay = props.displayValue.substr(1);
