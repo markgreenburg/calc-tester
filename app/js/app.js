@@ -23,6 +23,9 @@ export class App extends Component {
     this.inputEqual = this.inputEqual.bind(this);
   }
 
+  /**
+   * @param {string} string The number that corresponds to the pushed button
+   */
   inputNumber(string) {
     if (this.state.operatorActivated) {
      const currentDisplayValue = this.state.displayValue;
@@ -77,6 +80,10 @@ export class App extends Component {
     }
   }
 
+  /**
+   * @param {string} operator corresponds to whichever functional button was 
+   * pressed
+   */
   inputOperator(operator) {
     if (this.state.currentOperator) this.inputEqual();
     // Refactor: possible race condition - switch to redux should eliminate
