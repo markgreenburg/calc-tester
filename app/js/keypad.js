@@ -6,10 +6,15 @@ const Keypad = (props) => {
   const operators = ["/", "x", "-", "+", "="].map((operator) => {
     return (
       <Key
+        key={operator}
         displayValue={operator}
         inputType="operation"
         handleClick={props.inputOperator}
-        className={(props.currentOperator === operator ? "active" : "")}
+        className={(
+          props.currentOperator === operator && props.currentOperator !== "="
+          ? "active"
+          : ""
+        )}
       />
     );
   });
@@ -104,7 +109,7 @@ const Keypad = (props) => {
 };
 
 Keypad.propTypes = {
-  currentOperator: PropTypes.string.isRequired,
+  currentOperator: PropTypes.string,
   inputNumber: PropTypes.func.isRequired,
   inputClear: PropTypes.func.isRequired,
   inputReverse: PropTypes.func.isRequired,

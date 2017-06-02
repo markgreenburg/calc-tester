@@ -52,9 +52,14 @@ button {
 
 .keypad__right {
   display: inline-block;
+  background: linear-gradient(
+    rgb(249, 146, 0),
+    rgb(242, 119, 0)
+  );
   button {
     display: block;
-    background-color: #F78F12;
+    background-color: rgba(247, 143, 18, 0);
+    // opacity: 0;
     color: #fff;
   }
 }
