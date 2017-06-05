@@ -38,7 +38,7 @@ const Keypad = (props) => {
         </div>
         <div className="left__secondrow">
           <Key
-            displayValue="9"
+            displayValue="7"
             inputType="number"
             handleClick={props.inputNumber}
           />
@@ -48,14 +48,14 @@ const Keypad = (props) => {
             handleClick={props.inputNumber}
           />
           <Key
-            displayValue="7"
+            displayValue="9"
             inputType="number"
             handleClick={props.inputNumber}
           />
         </div>
         <div className="left__thirdrow">
           <Key
-            displayValue="6"
+            displayValue="4"
             inputType="number"
             handleClick={props.inputNumber}
           />
@@ -65,14 +65,14 @@ const Keypad = (props) => {
             handleClick={props.inputNumber}
           />
           <Key
-            displayValue="4"
+            displayValue="6"
             inputType="number"
             handleClick={props.inputNumber}
           />
         </div>
         <div className="left__fourthrow">
           <Key
-            displayValue="3"
+            displayValue="1"
             inputType="number"
             handleClick={props.inputNumber}
           />
@@ -82,7 +82,7 @@ const Keypad = (props) => {
             handleClick={props.inputNumber}
           />
           <Key
-            displayValue="1"
+            displayValue="3"
             inputType="number"
             handleClick={props.inputNumber}
           />
